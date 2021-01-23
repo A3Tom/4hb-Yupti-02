@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace Yupti.Data
+namespace Yupti.Data.Models
 {
     public partial class WorklogEvent
     {

@@ -1,10 +1,9 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
+﻿using Microsoft.EntityFrameworkCore;
+using Yupti.Data.Models;
 
 #nullable disable
 
-namespace Yupti.Data
+namespace Yupti.Data.Contexts
 {
     public partial class YuptiContext : DbContext
     {
@@ -21,15 +20,6 @@ namespace Yupti.Data
         public virtual DbSet<Card> Cards { get; set; }
         public virtual DbSet<Grouping> Groupings { get; set; }
         public virtual DbSet<WorklogEvent> WorklogEvents { get; set; }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=DESKTOP-JGPE91F\\SQLEXPRESS;Integrated Security=True;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;Initial Catalog=Yupti");
-            }
-        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

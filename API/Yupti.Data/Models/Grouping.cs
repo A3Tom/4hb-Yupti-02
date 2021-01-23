@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 #nullable disable
 
-namespace Yupti.Data
+namespace Yupti.Data.Models
 {
     public partial class Grouping
     {

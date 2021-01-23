@@ -22,7 +22,7 @@ namespace Yupti.Web
         public void ConfigureServices(IServiceCollection services)
         {
             #region DbContexts
-            services.AddDbContext<YuptiDbContexwt>(options => 
+            services.AddDbContext<YuptiContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("YuptiDbContext"))
             );
             #endregion
