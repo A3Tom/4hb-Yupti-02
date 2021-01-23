@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Yupti.Data.Contexts;
+using Yupti.Data.Repositories;
 
 namespace Yupti.Web
 {
@@ -25,6 +26,10 @@ namespace Yupti.Web
             services.AddDbContext<YuptiContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("YuptiDbContext"))
             );
+            #endregion
+
+            #region Services
+            services.AddScoped<IPlannerRepository, PlannerRespository>();
             #endregion
 
             services.AddControllers();

@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yupti.Web", "Yupti.Web\Yupti.Web.csproj", "{EAE8501A-66AC-46D8-AF22-263C2FB669B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yupti.Data", "Yupti.Data\Yupti.Data.csproj", "{23893C31-A4F6-4649-A419-32AFAC823DC5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Yupti.Data", "Yupti.Data\Yupti.Data.csproj", "{23893C31-A4F6-4649-A419-32AFAC823DC5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
