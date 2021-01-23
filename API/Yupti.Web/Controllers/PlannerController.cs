@@ -39,5 +39,13 @@ namespace Yupti.Web.Controllers
 
             return Ok(result);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> AddNewGrouping(Grouping newGrouping)
+        {
+            var result = await _plannerRepository.AddGrouping(newGrouping);
+
+            return Ok(result);
+        }
     }
 }

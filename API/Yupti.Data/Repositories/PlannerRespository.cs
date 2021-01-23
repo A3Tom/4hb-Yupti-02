@@ -83,7 +83,9 @@ namespace Yupti.Data.Repositories
         public async Task<Board> LoadFullBoardDataById(int boardId)
         {
             return await _dbContext.Boards
-                .Where(x => x.Id == boardId)
+                .Include(x => x.Groupings)
+                .ThenInclude(x => x.Cards)
+                .ThenInclude(x => x.WorklogEvents)
                 .SingleAsync();
         }
 
