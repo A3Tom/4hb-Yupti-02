@@ -1,0 +1,61 @@
+Purpose / wit does it dae ?
+
+I want to be able to store a bunch of worklog items in a managed visual collection.
+I want to build a database with tables for Boards, Lists, Cards and then WorklogEvents associated with them
+
+Database : SQL
+API : .Net 5 using C#
+Frontend : Angular 11
+
+Lets fucking gooooooooo
+
+The Russian Capital:
+	[M]	create a new board
+	[M] List all boards
+	[M] Create a new List within a board
+	[M] Modify an existing List
+	[M] Delete an existing List
+	[M] Create a new Card within a list
+	[M] Modify an existing Card
+	[M] Delete an existing Card
+	[M] Add a worklog event for a Card
+	
+	[S] Modify an existing board
+	[S] Mark Completed an existing List
+	[S] Archive an existing List
+	[S] Archive an existing Card
+	
+	[C] A worklog event overview
+	
+
+
+SQL Database with Full Text search for the labels part
+
+Database : 
+	Cards
+		Id
+		ListId
+		Title
+		Description
+		Labels
+		Archived 
+		Completed
+	
+	Lists
+		Id
+		Title
+		Archived
+		Completed
+		
+	WorklogEvents
+		Id
+		CardId
+		FromDateTime
+		ToDateTime
+		FinalFurlong
+		Labels
+		
+	Boards
+		Id
+		Name
+		Description
