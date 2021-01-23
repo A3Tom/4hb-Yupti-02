@@ -32,6 +32,21 @@ The Russian Capital:
 SQL Database with Full Text search for the labels part
 
 Database : 
+	Boards
+		Id
+		Name
+		Description
+		Active
+		
+	Lists
+		Id
+		BoardId
+		Title
+		Description
+		Labels
+		Archived
+		Completed
+		
 	Cards
 		Id
 		ListId
@@ -40,12 +55,6 @@ Database :
 		Labels
 		Archived 
 		Completed
-	
-	Lists
-		Id
-		Title
-		Archived
-		Completed
 		
 	WorklogEvents
 		Id
@@ -53,9 +62,5 @@ Database :
 		FromDateTime
 		ToDateTime
 		FinalFurlong
-		Labels
+		CreatedOn
 		
-	Boards
-		Id
-		Name
-		Description
