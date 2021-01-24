@@ -32,6 +32,9 @@ namespace Yupti.Web
             #region Services
             services.AddScoped<IPlannerRepository, PlannerRespository>();
             #endregion
+
+
+            services.AddCors();
             services.AddControllers()
                 .AddNewtonsoftJson(options =>
                 options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore
@@ -54,6 +57,12 @@ namespace Yupti.Web
             }
 
             app.UseHttpsRedirection();
+            // global cors policy
+            app.UseCors(x => x
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .SetIsOriginAllowed(origin => true) // allow any origin
+                .AllowCredentials()); // allow credentials
 
             app.UseRouting();
 
